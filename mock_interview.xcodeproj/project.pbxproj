@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD3F739D1CC93C90006053B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F739C1CC93C90006053B6 /* AppDelegate.swift */; };
+		CD3F739F1CC93C90006053B6 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F739E1CC93C90006053B6 /* CompanyViewController.swift */; };
+		CD3F73A21CC93C90006053B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3F73A01CC93C90006053B6 /* Main.storyboard */; };
+		CD3F73A51CC93C90006053B6 /* mock_interview.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD3F73A31CC93C90006053B6 /* mock_interview.xcdatamodeld */; };
+		CD3F73A71CC93C90006053B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3F73A61CC93C90006053B6 /* Assets.xcassets */; };
+		CD3F73AA1CC93C90006053B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3F73A81CC93C90006053B6 /* LaunchScreen.storyboard */; };
+		CD3F73B51CC93C90006053B6 /* mock_interviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F73B41CC93C90006053B6 /* mock_interviewTests.swift */; };
+		CD3F73C01CC93C90006053B6 /* mock_interviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F73BF1CC93C90006053B6 /* mock_interviewUITests.swift */; };
+		CDEEA70D1CCF62E9001FA71C /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA70C1CCF62E9001FA71C /* Company.swift */; };
+		CDEEA70F1CCF6315001FA71C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA70E1CCF6315001FA71C /* Question.swift */; };
+		CDEEA7111CCF6360001FA71C /* Glassdoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA7101CCF6360001FA71C /* Glassdoor.swift */; };
+		CDEEA7131CCF636E001FA71C /* Glassdoor-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA7121CCF636E001FA71C /* Glassdoor-Constants.swift */; };
+		CDEEA7161CCF78CC001FA71C /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA7141CCF78CC001FA71C /* CoreDataStackManager.swift */; };
+		CDEEA7171CCF78CC001FA71C /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA7151CCF78CC001FA71C /* ImageCache.swift */; };
+		CDEEA7191CCFCC20001FA71C /* CompanyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA7181CCFCC20001FA71C /* CompanyPickerViewController.swift */; };
+		CDEEA71B1CCFD6BE001FA71C /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA71A1CCFD6BE001FA71C /* CompanyTableViewCell.swift */; };
+		CDEEA71D1CCFD6E1001FA71C /* TaskCancelingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA71C1CCFD6E1001FA71C /* TaskCancelingTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD3F73B11CC93C90006053B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD3F73911CC93C90006053B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD3F73981CC93C90006053B6;
+			remoteInfo = mock_interview;
+		};
+		CD3F73BC1CC93C90006053B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD3F73911CC93C90006053B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD3F73981CC93C90006053B6;
+			remoteInfo = mock_interview;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD3F73991CC93C90006053B6 /* mock_interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mock_interview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3F739C1CC93C90006053B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD3F739E1CC93C90006053B6 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		CD3F73A11CC93C90006053B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD3F73A41CC93C90006053B6 /* mock_interview.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mock_interview.xcdatamodel; sourceTree = "<group>"; };
+		CD3F73A61CC93C90006053B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD3F73A91CC93C90006053B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD3F73AB1CC93C90006053B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD3F73B01CC93C90006053B6 /* mock_interviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mock_interviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3F73B41CC93C90006053B6 /* mock_interviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mock_interviewTests.swift; sourceTree = "<group>"; };
+		CD3F73B61CC93C90006053B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD3F73BB1CC93C90006053B6 /* mock_interviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mock_interviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3F73BF1CC93C90006053B6 /* mock_interviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mock_interviewUITests.swift; sourceTree = "<group>"; };
+		CD3F73C11CC93C90006053B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDEEA70C1CCF62E9001FA71C /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		CDEEA70E1CCF6315001FA71C /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		CDEEA7101CCF6360001FA71C /* Glassdoor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glassdoor.swift; sourceTree = "<group>"; };
+		CDEEA7121CCF636E001FA71C /* Glassdoor-Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Glassdoor-Constants.swift"; sourceTree = "<group>"; };
+		CDEEA7141CCF78CC001FA71C /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
+		CDEEA7151CCF78CC001FA71C /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		CDEEA7181CCFCC20001FA71C /* CompanyPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyPickerViewController.swift; sourceTree = "<group>"; };
+		CDEEA71A1CCFD6BE001FA71C /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		CDEEA71C1CCFD6E1001FA71C /* TaskCancelingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCancelingTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD3F73961CC93C90006053B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3F73AD1CC93C90006053B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3F73B81CC93C90006053B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD3F73901CC93C90006053B6 = {
+			isa = PBXGroup;
+			children = (
+				CD3F739B1CC93C90006053B6 /* mock_interview */,
+				CD3F73B31CC93C90006053B6 /* mock_interviewTests */,
+				CD3F73BE1CC93C90006053B6 /* mock_interviewUITests */,
+				CD3F739A1CC93C90006053B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD3F739A1CC93C90006053B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD3F73991CC93C90006053B6 /* mock_interview.app */,
+				CD3F73B01CC93C90006053B6 /* mock_interviewTests.xctest */,
+				CD3F73BB1CC93C90006053B6 /* mock_interviewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD3F739B1CC93C90006053B6 /* mock_interview */ = {
+			isa = PBXGroup;
+			children = (
+				CD3F739C1CC93C90006053B6 /* AppDelegate.swift */,
+				CDEEA7141CCF78CC001FA71C /* CoreDataStackManager.swift */,
+				CDEEA7181CCFCC20001FA71C /* CompanyPickerViewController.swift */,
+				CDEEA71A1CCFD6BE001FA71C /* CompanyTableViewCell.swift */,
+				CDEEA71C1CCFD6E1001FA71C /* TaskCancelingTableViewCell.swift */,
+				CDEEA7151CCF78CC001FA71C /* ImageCache.swift */,
+				CD3F739E1CC93C90006053B6 /* CompanyViewController.swift */,
+				CDEEA70B1CCF62D2001FA71C /* Glassdoor */,
+				CD3F73A01CC93C90006053B6 /* Main.storyboard */,
+				CD3F73A61CC93C90006053B6 /* Assets.xcassets */,
+				CD3F73A81CC93C90006053B6 /* LaunchScreen.storyboard */,
+				CD3F73AB1CC93C90006053B6 /* Info.plist */,
+				CD3F73A31CC93C90006053B6 /* mock_interview.xcdatamodeld */,
+			);
+			path = mock_interview;
+			sourceTree = "<group>";
+		};
+		CD3F73B31CC93C90006053B6 /* mock_interviewTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD3F73B41CC93C90006053B6 /* mock_interviewTests.swift */,
+				CD3F73B61CC93C90006053B6 /* Info.plist */,
+			);
+			path = mock_interviewTests;
+			sourceTree = "<group>";
+		};
+		CD3F73BE1CC93C90006053B6 /* mock_interviewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD3F73BF1CC93C90006053B6 /* mock_interviewUITests.swift */,
+				CD3F73C11CC93C90006053B6 /* Info.plist */,
+			);
+			path = mock_interviewUITests;
+			sourceTree = "<group>";
+		};
+		CDEEA70B1CCF62D2001FA71C /* Glassdoor */ = {
+			isa = PBXGroup;
+			children = (
+				CDEEA70C1CCF62E9001FA71C /* Company.swift */,
+				CDEEA70E1CCF6315001FA71C /* Question.swift */,
+				CDEEA7101CCF6360001FA71C /* Glassdoor.swift */,
+				CDEEA7121CCF636E001FA71C /* Glassdoor-Constants.swift */,
+			);
+			name = Glassdoor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD3F73981CC93C90006053B6 /* mock_interview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD3F73C41CC93C90006053B6 /* Build configuration list for PBXNativeTarget "mock_interview" */;
+			buildPhases = (
+				CD3F73951CC93C90006053B6 /* Sources */,
+				CD3F73961CC93C90006053B6 /* Frameworks */,
+				CD3F73971CC93C90006053B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mock_interview;
+			productName = mock_interview;
+			productReference = CD3F73991CC93C90006053B6 /* mock_interview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD3F73AF1CC93C90006053B6 /* mock_interviewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD3F73C71CC93C90006053B6 /* Build configuration list for PBXNativeTarget "mock_interviewTests" */;
+			buildPhases = (
+				CD3F73AC1CC93C90006053B6 /* Sources */,
+				CD3F73AD1CC93C90006053B6 /* Frameworks */,
+				CD3F73AE1CC93C90006053B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD3F73B21CC93C90006053B6 /* PBXTargetDependency */,
+			);
+			name = mock_interviewTests;
+			productName = mock_interviewTests;
+			productReference = CD3F73B01CC93C90006053B6 /* mock_interviewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD3F73BA1CC93C90006053B6 /* mock_interviewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD3F73CA1CC93C90006053B6 /* Build configuration list for PBXNativeTarget "mock_interviewUITests" */;
+			buildPhases = (
+				CD3F73B71CC93C90006053B6 /* Sources */,
+				CD3F73B81CC93C90006053B6 /* Frameworks */,
+				CD3F73B91CC93C90006053B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD3F73BD1CC93C90006053B6 /* PBXTargetDependency */,
+			);
+			name = mock_interviewUITests;
+			productName = mock_interviewUITests;
+			productReference = CD3F73BB1CC93C90006053B6 /* mock_interviewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD3F73911CC93C90006053B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = XZM;
+				TargetAttributes = {
+					CD3F73981CC93C90006053B6 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					CD3F73AF1CC93C90006053B6 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = CD3F73981CC93C90006053B6;
+					};
+					CD3F73BA1CC93C90006053B6 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = CD3F73981CC93C90006053B6;
+					};
+				};
+			};
+			buildConfigurationList = CD3F73941CC93C90006053B6 /* Build configuration list for PBXProject "mock_interview" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD3F73901CC93C90006053B6;
+			productRefGroup = CD3F739A1CC93C90006053B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD3F73981CC93C90006053B6 /* mock_interview */,
+				CD3F73AF1CC93C90006053B6 /* mock_interviewTests */,
+				CD3F73BA1CC93C90006053B6 /* mock_interviewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD3F73971CC93C90006053B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3F73AA1CC93C90006053B6 /* LaunchScreen.storyboard in Resources */,
+				CD3F73A71CC93C90006053B6 /* Assets.xcassets in Resources */,
+				CD3F73A21CC93C90006053B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3F73AE1CC93C90006053B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3F73B91CC93C90006053B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD3F73951CC93C90006053B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDEEA7191CCFCC20001FA71C /* CompanyPickerViewController.swift in Sources */,
+				CDEEA70F1CCF6315001FA71C /* Question.swift in Sources */,
+				CDEEA7161CCF78CC001FA71C /* CoreDataStackManager.swift in Sources */,
+				CD3F739F1CC93C90006053B6 /* CompanyViewController.swift in Sources */,
+				CDEEA71B1CCFD6BE001FA71C /* CompanyTableViewCell.swift in Sources */,
+				CDEEA7171CCF78CC001FA71C /* ImageCache.swift in Sources */,
+				CDEEA71D1CCFD6E1001FA71C /* TaskCancelingTableViewCell.swift in Sources */,
+				CDEEA7111CCF6360001FA71C /* Glassdoor.swift in Sources */,
+				CD3F73A51CC93C90006053B6 /* mock_interview.xcdatamodeld in Sources */,
+				CD3F739D1CC93C90006053B6 /* AppDelegate.swift in Sources */,
+				CDEEA7131CCF636E001FA71C /* Glassdoor-Constants.swift in Sources */,
+				CDEEA70D1CCF62E9001FA71C /* Company.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3F73AC1CC93C90006053B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3F73B51CC93C90006053B6 /* mock_interviewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3F73B71CC93C90006053B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3F73C01CC93C90006053B6 /* mock_interviewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD3F73B21CC93C90006053B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD3F73981CC93C90006053B6 /* mock_interview */;
+			targetProxy = CD3F73B11CC93C90006053B6 /* PBXContainerItemProxy */;
+		};
+		CD3F73BD1CC93C90006053B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD3F73981CC93C90006053B6 /* mock_interview */;
+			targetProxy = CD3F73BC1CC93C90006053B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD3F73A01CC93C90006053B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD3F73A11CC93C90006053B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD3F73A81CC93C90006053B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD3F73A91CC93C90006053B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD3F73C21CC93C90006053B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD3F73C31CC93C90006053B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD3F73C51CC93C90006053B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mock_interview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "XZM.mock-interview";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD3F73C61CC93C90006053B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mock_interview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "XZM.mock-interview";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD3F73C81CC93C90006053B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = mock_interviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "XZM.mock-interviewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mock_interview.app/mock_interview";
+			};
+			name = Debug;
+		};
+		CD3F73C91CC93C90006053B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = mock_interviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "XZM.mock-interviewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mock_interview.app/mock_interview";
+			};
+			name = Release;
+		};
+		CD3F73CB1CC93C90006053B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = mock_interviewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "XZM.mock-interviewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mock_interview;
+			};
+			name = Debug;
+		};
+		CD3F73CC1CC93C90006053B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = mock_interviewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "XZM.mock-interviewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mock_interview;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD3F73941CC93C90006053B6 /* Build configuration list for PBXProject "mock_interview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3F73C21CC93C90006053B6 /* Debug */,
+				CD3F73C31CC93C90006053B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD3F73C41CC93C90006053B6 /* Build configuration list for PBXNativeTarget "mock_interview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3F73C51CC93C90006053B6 /* Debug */,
+				CD3F73C61CC93C90006053B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD3F73C71CC93C90006053B6 /* Build configuration list for PBXNativeTarget "mock_interviewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3F73C81CC93C90006053B6 /* Debug */,
+				CD3F73C91CC93C90006053B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD3F73CA1CC93C90006053B6 /* Build configuration list for PBXNativeTarget "mock_interviewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3F73CB1CC93C90006053B6 /* Debug */,
+				CD3F73CC1CC93C90006053B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD3F73A31CC93C90006053B6 /* mock_interview.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD3F73A41CC93C90006053B6 /* mock_interview.xcdatamodel */,
+			);
+			currentVersion = CD3F73A41CC93C90006053B6 /* mock_interview.xcdatamodel */;
+			path = mock_interview.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CD3F73911CC93C90006053B6 /* Project object */;
+}
