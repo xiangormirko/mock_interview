@@ -71,6 +71,24 @@
             </objects>
             <point key="canvasLocation" x="2752" y="252"/>
         </scene>
+        <!--Interview View Controller-->
+        <scene sceneID="sOq-Kz-Mok">
+            <objects>
+                <viewController storyboardIdentifier="InterviewViewController" id="BZc-cM-Pxn" customClass="InterviewViewController" customModule="mock_interview" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mLI-5y-Y2G"/>
+                        <viewControllerLayoutGuide type="bottom" id="iWu-U0-qLB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jNT-mb-1KE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcd-PY-Qcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2752" y="983"/>
+        </scene>
         <!--Company Picker View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

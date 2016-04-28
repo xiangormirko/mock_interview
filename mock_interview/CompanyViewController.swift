@@ -31,11 +31,6 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
         fetchedResultsController.delegate = self
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -94,24 +89,6 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
         }
     }
     
-
-//    func scrape() {
-//        let url = NSURL(string: "https://www.glassdoor.com/Interview/Boston-Consulting-Group-Interview-Questions-E3879.htm")
-//        
-//        if url != nil {
-//            let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
-//                print(data)
-//                
-//                if error == nil {
-//                    
-//                    let urlContent = NSString(data: data!, encoding: NSASCIIStringEncoding) as NSString!
-//                    
-//                    print(urlContent)
-//                }
-//            })
-//            task.resume()
-//        }
-//    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = self.fetchedResultsController.sections![section]
@@ -132,12 +109,10 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let controller = storyboard!.instantiateViewControllerWithIdentifier("MovieListViewController") as! MovieListViewController
-//        let actor = fetchedResultsController.objectAtIndexPath(indexPath) as! Person
-//        
-//        controller.actor = actor
-//        
-//        self.navigationController!.pushViewController(controller, animated: true)
+        let controller = storyboard!.instantiateViewControllerWithIdentifier("InterviewViewController") as! InterviewViewController
+        let company = fetchedResultsController.objectAtIndexPath(indexPath) as! Company
+        controller.company = company
+        self.navigationController!.pushViewController(controller, animated: true)
         print("clicked")
     }
     
@@ -216,16 +191,11 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
 
         if let localImage = company.companyLogo {
             cell.companyLogoView.image = localImage
-            print("image case 1")
         } else if company.logo == nil || company.logo == "" {
-            print("image case 2")
             cell.companyLogoView.image = UIImage(named: "default")
         }
-        
-            // If the above cases don't work, then we should download the image
-            
+
         else {
-            print("image case 3")
             // Set the placeholder
             cell.companyLogoView.image = UIImage(named: "default")
             

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C8B74FFFBC203431673E3F5 /* Pods_mock_interview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D128C4C62EF068BB56FC2BD1 /* Pods_mock_interview.framework */; };
 		CD3F739D1CC93C90006053B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F739C1CC93C90006053B6 /* AppDelegate.swift */; };
 		CD3F739F1CC93C90006053B6 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F739E1CC93C90006053B6 /* CompanyViewController.swift */; };
 		CD3F73A21CC93C90006053B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3F73A01CC93C90006053B6 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		CD3F73AA1CC93C90006053B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3F73A81CC93C90006053B6 /* LaunchScreen.storyboard */; };
 		CD3F73B51CC93C90006053B6 /* mock_interviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F73B41CC93C90006053B6 /* mock_interviewTests.swift */; };
 		CD3F73C01CC93C90006053B6 /* mock_interviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F73BF1CC93C90006053B6 /* mock_interviewUITests.swift */; };
+		CDBB87EA1CD127CC0024B022 /* InterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB87E91CD127CC0024B022 /* InterviewViewController.swift */; };
 		CDEEA70D1CCF62E9001FA71C /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA70C1CCF62E9001FA71C /* Company.swift */; };
 		CDEEA70F1CCF6315001FA71C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA70E1CCF6315001FA71C /* Question.swift */; };
 		CDEEA7111CCF6360001FA71C /* Glassdoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA7101CCF6360001FA71C /* Glassdoor.swift */; };
@@ -44,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9FA91774A3D555A34FF5C828 /* Pods-mock_interview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock_interview.release.xcconfig"; path = "Pods/Target Support Files/Pods-mock_interview/Pods-mock_interview.release.xcconfig"; sourceTree = "<group>"; };
 		CD3F73991CC93C90006053B6 /* mock_interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mock_interview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3F739C1CC93C90006053B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3F739E1CC93C90006053B6 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		CD3F73BB1CC93C90006053B6 /* mock_interviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mock_interviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3F73BF1CC93C90006053B6 /* mock_interviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mock_interviewUITests.swift; sourceTree = "<group>"; };
 		CD3F73C11CC93C90006053B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDBB87E91CD127CC0024B022 /* InterviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewViewController.swift; sourceTree = "<group>"; };
 		CDEEA70C1CCF62E9001FA71C /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		CDEEA70E1CCF6315001FA71C /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CDEEA7101CCF6360001FA71C /* Glassdoor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glassdoor.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 		CDEEA7181CCFCC20001FA71C /* CompanyPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyPickerViewController.swift; sourceTree = "<group>"; };
 		CDEEA71A1CCFD6BE001FA71C /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		CDEEA71C1CCFD6E1001FA71C /* TaskCancelingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCancelingTableViewCell.swift; sourceTree = "<group>"; };
+		D128C4C62EF068BB56FC2BD1 /* Pods_mock_interview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mock_interview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53A972213B3ED26365AE357 /* Pods-mock_interview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock_interview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mock_interview/Pods-mock_interview.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8B74FFFBC203431673E3F5 /* Pods_mock_interview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F1053C7E831FA12420E3DAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D128C4C62EF068BB56FC2BD1 /* Pods_mock_interview.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD3F73901CC93C90006053B6 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +116,8 @@
 				CD3F73B31CC93C90006053B6 /* mock_interviewTests */,
 				CD3F73BE1CC93C90006053B6 /* mock_interviewUITests */,
 				CD3F739A1CC93C90006053B6 /* Products */,
+				E59CC1EC55D55832A48C79FC /* Pods */,
+				0F1053C7E831FA12420E3DAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +136,7 @@
 			children = (
 				CD3F739C1CC93C90006053B6 /* AppDelegate.swift */,
 				CDEEA7141CCF78CC001FA71C /* CoreDataStackManager.swift */,
+				CDBB87E91CD127CC0024B022 /* InterviewViewController.swift */,
 				CDEEA7181CCFCC20001FA71C /* CompanyPickerViewController.swift */,
 				CDEEA71A1CCFD6BE001FA71C /* CompanyTableViewCell.swift */,
 				CDEEA71C1CCFD6E1001FA71C /* TaskCancelingTableViewCell.swift */,
@@ -163,6 +181,15 @@
 			name = Glassdoor;
 			sourceTree = "<group>";
 		};
+		E59CC1EC55D55832A48C79FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D53A972213B3ED26365AE357 /* Pods-mock_interview.debug.xcconfig */,
+				9FA91774A3D555A34FF5C828 /* Pods-mock_interview.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3F73C41CC93C90006053B6 /* Build configuration list for PBXNativeTarget "mock_interview" */;
 			buildPhases = (
+				36D27E005E5094CDC1B197E9 /* Check Pods Manifest.lock */,
 				CD3F73951CC93C90006053B6 /* Sources */,
 				CD3F73961CC93C90006053B6 /* Frameworks */,
 				CD3F73971CC93C90006053B6 /* Resources */,
+				2C50D9920EC705F2FC6FD9F0 /* Embed Pods Frameworks */,
+				97B80F87D91677933E27163D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,6 +319,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C50D9920EC705F2FC6FD9F0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mock_interview/Pods-mock_interview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36D27E005E5094CDC1B197E9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97B80F87D91677933E27163D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mock_interview/Pods-mock_interview-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD3F73951CC93C90006053B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -301,6 +379,7 @@
 				CDEEA71B1CCFD6BE001FA71C /* CompanyTableViewCell.swift in Sources */,
 				CDEEA7171CCF78CC001FA71C /* ImageCache.swift in Sources */,
 				CDEEA71D1CCFD6E1001FA71C /* TaskCancelingTableViewCell.swift in Sources */,
+				CDBB87EA1CD127CC0024B022 /* InterviewViewController.swift in Sources */,
 				CDEEA7111CCF6360001FA71C /* Glassdoor.swift in Sources */,
 				CD3F73A51CC93C90006053B6 /* mock_interview.xcdatamodeld in Sources */,
 				CD3F739D1CC93C90006053B6 /* AppDelegate.swift in Sources */,
@@ -445,6 +524,7 @@
 		};
 		CD3F73C51CC93C90006053B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D53A972213B3ED26365AE357 /* Pods-mock_interview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mock_interview/Info.plist;
@@ -456,6 +536,7 @@
 		};
 		CD3F73C61CC93C90006053B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FA91774A3D555A34FF5C828 /* Pods-mock_interview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mock_interview/Info.plist;

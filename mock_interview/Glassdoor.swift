@@ -22,7 +22,7 @@ class Glassdoor : NSObject {
     
     func taskForResource(parameters: [String : AnyObject], completionHandler: CompletionHander) -> NSURLSessionDataTask {
         
-        var mutableParameters = parameters
+        let mutableParameters = parameters
         
         let urlString = Constants.BaseUrlSSL + Glassdoor.escapedParameters(mutableParameters)
         let url = NSURL(string: urlString)!
