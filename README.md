@@ -22,7 +22,7 @@ CocoaPods:
 INSTALLATION
 
 Navigate to the desired folder.
-https://github.com/xiangormirko/virtual_tourist.git
--open the file title 'Virtual Toursit.xcodeproj'
+https://github.com/xiangormirko/mock_interview.git
+-open the file title 'mock_interview.xcworkspace'
 -Thanks and enjoy!
 
