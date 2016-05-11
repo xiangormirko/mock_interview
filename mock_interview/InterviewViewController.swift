@@ -17,25 +17,40 @@ import AVFoundation
 
 class InterviewViewController: UIViewController, NSFetchedResultsControllerDelegate, AVAudioRecorderDelegate {
     
-    
+    // Outlets
+    @IBOutlet weak var editAddButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var interviewButton: UIButton!
     @IBOutlet weak var interviewText: UITextView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var interviewerView: UIImageView!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var nextQButton: UIButton!
+    
+    // Core Data holder variables
     var company : Company!
+    var questionList = [Question]()
+    
+    // Audio session variable
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var recordedAudio : NSURL!
     var recording: AVAudioPlayer!
-    var questionList = [Question]()
-
-
+    
+    
+    // Timer variable
+    var timer = NSTimer()
+    var counter = 0
     
     var html = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        timerLabel.text = timeString(counter)
+        
+        
         
         // Step 2: Perform the fetch
         do {
@@ -61,8 +76,15 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
         
         fetchedResultsController.delegate = self
         recordingSession = AVAudioSession.sharedInstance()
-        recordButton.hidden = true
-        print(company)
+        
+        // UI settings
+        recordButton.alpha = 0.0
+        recordButton.layer.cornerRadius = 5
+        editAddButton.layer.cornerRadius = 5
+        interviewButton.layer.cornerRadius = 5
+        nextQButton.layer.cornerRadius = 5
+        nextQButton.alpha = 0.0
+
         
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -194,13 +216,8 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
     }
     
     @IBAction func interviewButton(sender: AnyObject) {
-
         recordTapped()
-        let randomInt = Int(arc4random_uniform(UInt32(questionList.count)))
-        let randomCompany = questionList[randomInt]
-        interviewText.text = randomCompany.text
-        
-
+        nextQ()
     }
     
     func getDocumentsDirectory() -> String {
@@ -251,12 +268,25 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
         if audioRecorder == nil {
             startRecording()
             recordButton.hidden = false
+            UIView.animateWithDuration(1.0, animations: {
+                self.recordButton.alpha = 1.0
+            }, completion: nil)
+            UIView.animateWithDuration(1.0, animations: {
+                self.nextQButton.alpha = 1.0
+                }, completion: nil)
+            
             recordButton.enabled = false
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: #selector(InterviewViewController.updateCounter), userInfo: nil, repeats: true)
         } else {
             finishRecording(success: true)
             recordButton.setTitle("Play recording", forState: .Normal)
             recordButton.enabled = true
-            recordButton.backgroundColor = UIColor.greenColor()
+            recordButton.backgroundColor = UIColor(red: 0.3059, green: 0.8078, blue: 0.4314, alpha: 1.0)
+            
+            timer.invalidate()
+            counter = 0
+            timerLabel.text = String(counter)
         }
     }
     
@@ -282,15 +312,14 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
             }
             
             recordButton.setTitle("Stop", forState: UIControlState.Normal)
-            recordButton.backgroundColor = UIColor.redColor()
+            recordButton.backgroundColor = UIColor(red: 1, green: 0.451, blue: 0.3765, alpha: 1.0)
         } else {
             if recording != nil {
-                print("no recording")
                 recording.stop()
                 recording = nil
             }
             recordButton.setTitle("Play recording", forState: UIControlState.Normal)
-            recordButton.backgroundColor = UIColor.greenColor()
+            recordButton.backgroundColor = UIColor(red: 0.3059, green: 0.8078, blue: 0.4314, alpha: 1.0)
         }
         
 
@@ -298,5 +327,32 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
     }
     
     
+    func timeString(time:Int) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    }
+    
+    func updateCounter() {
+        counter += 1
+        timerLabel.text = timeString(counter)
+    }
+    
+    @IBAction func nextQuestion(sender: AnyObject) {
+        nextQ()
+    }
+    
+    func nextQ() {
+        if questionList.count == 0 {
+            interviewText.text = "Congrats! You made it throught all the questions!, restart or add more questions "
+        } else {
+            let randomInt = Int(arc4random_uniform(UInt32(questionList.count)))
+            let randomCompany = questionList[randomInt]
+            questionList.removeAtIndex(randomInt)
+            interviewText.text = randomCompany.text
+        }
+        
+    }
     
 }

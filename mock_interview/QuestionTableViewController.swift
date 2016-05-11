@@ -13,6 +13,7 @@ import CoreData
 class QuestionTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var questionTextView: UITextView!
+    @IBOutlet weak var confirmButton: UIButton!
     
     var questions = [Question]()
     var company : Company?
@@ -23,6 +24,7 @@ class QuestionTableViewController: UIViewController, UITableViewDelegate, UITabl
         tableView.dataSource = self;
         questionTextView.textColor = UIColor.lightGrayColor()
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        confirmButton.layer.cornerRadius = 5
 
     }
     
