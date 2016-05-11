@@ -124,6 +124,17 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
             Alamofire.request(.GET, urlString)
                 .responseString { responseString in
                     guard responseString.result.error == nil else {
+                        // Initialize Alert Controller
+                        dispatch_async(dispatch_get_main_queue()) {
+                            let alertController = UIAlertController(title: "Request error", message: "Something went wrong with the network", preferredStyle: .Alert)
+                            let action = UIAlertAction(title: "OK, happens...", style: .Default) { (action) -> Void in
+                                print("The user is okay.")
+                            }
+                            alertController.addAction(action)
+                            self.presentViewController(alertController, animated: true, completion: nil)
+                        }
+                        
+                        
                         completionHandler(responseString.result.error!)
                         return
                         

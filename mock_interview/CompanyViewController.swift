@@ -198,6 +198,21 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
 
             let task = Glassdoor.sharedInstance().taskForImage(company.logo!) { (imageData, error) -> Void in
                 
+                // Handle the error case
+                if let error = error {
+                    // Initialize Alert Controller
+                    dispatch_async(dispatch_get_main_queue()) {
+                        let alertController = UIAlertController(title: "Request error", message: "Something went wrong with the network", preferredStyle: .Alert)
+                        let action = UIAlertAction(title: "OK, happens...", style: .Default) { (action) -> Void in
+                            print("The user is okay.")
+                        }
+                        alertController.addAction(action)
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    }
+                    print("Error searching for actors: \(error.localizedDescription)")
+                    return
+                }
+                
                 if let data = imageData {
                     dispatch_async(dispatch_get_main_queue()) {
                         let image = UIImage(data: data)
