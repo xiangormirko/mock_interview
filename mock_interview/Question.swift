@@ -11,7 +11,7 @@ import CoreData
 
 class Question : NSManagedObject {
     @NSManaged var text : String
-    @NSManaged var company : Company
+    @NSManaged var company : Company?
     
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
         super.init(entity: entity, insertIntoManagedObjectContext: context)

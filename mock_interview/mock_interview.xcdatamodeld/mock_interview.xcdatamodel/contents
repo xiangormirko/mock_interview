@@ -9,7 +9,7 @@
         <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="sector" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="questions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="company" inverseEntity="Question" syncable="YES"/>
+        <relationship name="questions" toMany="YES" deletionRule="Cascade" destinationEntity="Question" inverseName="company" inverseEntity="Question" syncable="YES"/>
     </entity>
     <entity name="Question" representedClassName=".Question" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>

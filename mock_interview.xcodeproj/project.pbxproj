@@ -16,6 +16,7 @@
 		CD3F73AA1CC93C90006053B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3F73A81CC93C90006053B6 /* LaunchScreen.storyboard */; };
 		CD3F73B51CC93C90006053B6 /* mock_interviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F73B41CC93C90006053B6 /* mock_interviewTests.swift */; };
 		CD3F73C01CC93C90006053B6 /* mock_interviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F73BF1CC93C90006053B6 /* mock_interviewUITests.swift */; };
+		CD9457971CD78A0F00FFC782 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9457961CD78A0F00FFC782 /* QuestionTableViewController.swift */; };
 		CDBB87EA1CD127CC0024B022 /* InterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB87E91CD127CC0024B022 /* InterviewViewController.swift */; };
 		CDEEA70D1CCF62E9001FA71C /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA70C1CCF62E9001FA71C /* Company.swift */; };
 		CDEEA70F1CCF6315001FA71C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEEA70E1CCF6315001FA71C /* Question.swift */; };
@@ -61,6 +62,7 @@
 		CD3F73BB1CC93C90006053B6 /* mock_interviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mock_interviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3F73BF1CC93C90006053B6 /* mock_interviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mock_interviewUITests.swift; sourceTree = "<group>"; };
 		CD3F73C11CC93C90006053B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD9457961CD78A0F00FFC782 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		CDBB87E91CD127CC0024B022 /* InterviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewViewController.swift; sourceTree = "<group>"; };
 		CDEEA70C1CCF62E9001FA71C /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		CDEEA70E1CCF6315001FA71C /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				CDEEA71A1CCFD6BE001FA71C /* CompanyTableViewCell.swift */,
 				CDEEA71C1CCFD6E1001FA71C /* TaskCancelingTableViewCell.swift */,
 				CDEEA7151CCF78CC001FA71C /* ImageCache.swift */,
+				CD9457961CD78A0F00FFC782 /* QuestionTableViewController.swift */,
 				CD3F739E1CC93C90006053B6 /* CompanyViewController.swift */,
 				CDEEA70B1CCF62D2001FA71C /* Glassdoor */,
 				CD3F73A01CC93C90006053B6 /* Main.storyboard */,
@@ -373,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEEA7191CCFCC20001FA71C /* CompanyPickerViewController.swift in Sources */,
+				CD9457971CD78A0F00FFC782 /* QuestionTableViewController.swift in Sources */,
 				CDEEA70F1CCF6315001FA71C /* Question.swift in Sources */,
 				CDEEA7161CCF78CC001FA71C /* CoreDataStackManager.swift in Sources */,
 				CD3F739F1CC93C90006053B6 /* CompanyViewController.swift in Sources */,

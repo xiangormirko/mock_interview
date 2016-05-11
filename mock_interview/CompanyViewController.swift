@@ -81,10 +81,8 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
             ]
 
             // Now we create a new Company, using the shared Context
-            let comapany = Company(dictionary: dictionary, context: sharedContext)
-            
-            print(company!.logo)
-            
+            _ = Company(dictionary: dictionary, context: sharedContext)
+
             CoreDataStackManager.sharedInstance().saveContext()
         }
     }
@@ -113,7 +111,6 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
         let company = fetchedResultsController.objectAtIndexPath(indexPath) as! Company
         controller.company = company
         self.navigationController!.pushViewController(controller, animated: true)
-        print("clicked")
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -171,8 +168,6 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
             tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
             tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
             
-        default:
-            return
         }
     }
     
