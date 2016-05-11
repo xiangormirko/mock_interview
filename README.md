@@ -7,15 +7,16 @@ The apps pulls general information from Glassdoor. User may add interview questi
 
 LIBRARIES USED
 
-UIKit
-UIMapKit
-CoreData
-AVFoundation
-AVAudioRecorderDelegate
-'Kanna', '~> 1.0.0'
-'HTMLReader', '~> 0.9'
-'Alamofire', '~> 3.0.0'
-'SwiftyJSON', '~> 2.3.0'
+UIKit  
+UIMapKit  
+CoreData  
+AVFoundation  
+AVAudioRecorderDelegate    
+CocoaPods:  
+'Kanna', '~> 1.0.0'  
+'HTMLReader', '~> 0.9'  
+'Alamofire', '~> 3.0.0'  
+'SwiftyJSON', '~> 2.3.0'  
 
 
 INSTALLATION
