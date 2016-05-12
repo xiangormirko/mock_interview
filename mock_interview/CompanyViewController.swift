@@ -12,9 +12,35 @@ import CoreData
 class ComanyViewController: UITableViewController, CompanyPickerViewControllerDelegate, NSFetchedResultsControllerDelegate {
     
     var searchTask: NSURLSessionDataTask?
+    let prefs = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if prefs.boolForKey("notFirstTime") {
+            print("false")
+        } else {
+            print("true")
+            let entity = NSEntityDescription.entityForName("Company", inManagedObjectContext: sharedContext)
+            
+            let Mok = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: sharedContext)
+            Mok.setValue("Mok", forKey: "name")
+            Mok.setValue(0000, forKey: "glassdoorId")
+            Mok.setValue(UIImage(named: "Icon-Small"), forKey: "companyLogo")
+            Mok.setValue("Custom Interview, edit as you wish", forKey: "website")
+            
+            saveContext()
+            
+            for text in Glassdoor.topQuestions {
+                let question = Question(string: text, context: self.sharedContext)
+                question.company = Mok as? Company
+            }
+            
+            saveContext()
+            
+            prefs.setBool(true, forKey: "notFirstTime")
+            
+        }
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(ComanyViewController.addCompany))
@@ -30,6 +56,9 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
         // Step 9: set the fetchedResultsController.delegate = self
         fetchedResultsController.delegate = self
         
+        
+
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,6 +71,10 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
     
     var sharedContext: NSManagedObjectContext {
         return CoreDataStackManager.sharedInstance().managedObjectContext
+    }
+    
+    func saveContext() {
+        CoreDataStackManager.sharedInstance().saveContext()
     }
     
     lazy var fetchedResultsController: NSFetchedResultsController = {
@@ -209,7 +242,7 @@ class ComanyViewController: UITableViewController, CompanyPickerViewControllerDe
                         alertController.addAction(action)
                         self.presentViewController(alertController, animated: true, completion: nil)
                     }
-                    print("Error searching for actors: \(error.localizedDescription)")
+                    print("Error searching for logo: \(error.localizedDescription)")
                     return
                 }
                 

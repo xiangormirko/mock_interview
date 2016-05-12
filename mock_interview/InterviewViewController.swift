@@ -18,6 +18,7 @@ import AVFoundation
 class InterviewViewController: UIViewController, NSFetchedResultsControllerDelegate, AVAudioRecorderDelegate {
     
     // Outlets
+    @IBOutlet weak var textToSpeechSwitch: UISwitch!
     @IBOutlet weak var editAddButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var interviewButton: UIButton!
@@ -26,6 +27,7 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
     @IBOutlet weak var interviewerView: UIImageView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var nextQButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // Core Data holder variables
     var company : Company!
@@ -36,6 +38,10 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
     var audioRecorder: AVAudioRecorder!
     var recordedAudio : NSURL!
     var recording: AVAudioPlayer!
+    
+    // Audio session variable
+    let synth = AVSpeechSynthesizer()
+    var myUtterance = AVSpeechUtterance(string: "")
     
     
     // Timer variable
@@ -62,10 +68,34 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
                     questionList.append(object)
                     
                 }
-            } else {
+            } else if company.name != "Mok" {
                 print("time to fetch")
                 fetchData{_ in
                     print("successfully retrieved qustions")
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.activityIndicator.stopAnimating()
+                    }
+                    do {
+                        try self.fetchedResultsController.performFetch()
+                        if self.fetchedResultsController.fetchedObjects!.count > 1 {
+                            print("count: \(self.fetchedResultsController.fetchedObjects!.count)")
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.questionLabel.text = "Questions: "+String(self.fetchedResultsController.fetchedObjects!.count)
+                            }
+                            for obj in self.fetchedResultsController.fetchedObjects! {
+                                let object = obj as! Question
+                                self.questionList.append(object)
+                                
+                                
+                            }
+                        } else {
+                            print("less than 1 question")
+                        }
+                        
+                    } catch {
+                        print("Unresolved error \(error)")
+                        abort()
+                    }
                 }
             }
             
@@ -118,6 +148,9 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
     }
     
     func fetchData(completionHandler: (NSError?) -> Void) {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.startAnimating()
+        }
         let companyString = (company.name as NSString).stringByReplacingOccurrencesOfString(" ", withString: "-")
         let urlString = Glassdoor.Constants.BaseSite + companyString + Glassdoor.Constants.Component + String(company.glassdoorId) + Glassdoor.Constants.EndPath
 
@@ -160,6 +193,7 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
                     
                     
                     self.saveContext()
+                    
                     completionHandler(nil)
 
         }
@@ -228,7 +262,6 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
     
     @IBAction func interviewButton(sender: AnyObject) {
         recordTapped()
-        nextQ()
     }
     
     func getDocumentsDirectory() -> String {
@@ -267,6 +300,9 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
             audioRecorder.delegate = self
             audioRecorder.record()
             interviewButton.setTitle("Tap to stop", forState: .Normal)
+            interviewButton.backgroundColor = UIColor(red: 1, green: 0.451, blue: 0.3765, alpha: 1.0)
+            recordButton.setTitle("Recording", forState: .Normal)
+            recordButton.backgroundColor = UIColor(red: 1, green: 0.451, blue: 0.3765, alpha: 1.0)
             
         } catch {
             finishRecording(success: false)
@@ -287,6 +323,10 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
                 }, completion: nil)
             
             recordButton.enabled = false
+            nextQ()
+            if textToSpeechSwitch.on {
+                textToSpeech()
+            }
             
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: #selector(InterviewViewController.updateCounter), userInfo: nil, repeats: true)
         } else {
@@ -297,7 +337,7 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
             
             timer.invalidate()
             counter = 0
-            timerLabel.text = String(counter)
+            timerLabel.text = String(timeString(counter))
         }
     }
     
@@ -352,6 +392,10 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
     
     @IBAction func nextQuestion(sender: AnyObject) {
         nextQ()
+        if textToSpeechSwitch.on {
+           textToSpeech()
+        }
+        
     }
     
     func nextQ() {
@@ -364,6 +408,12 @@ class InterviewViewController: UIViewController, NSFetchedResultsControllerDeleg
             interviewText.text = randomCompany.text
         }
         
+    }
+    
+    func textToSpeech() {
+        myUtterance = AVSpeechUtterance(string: interviewText.text)
+        myUtterance.rate = 0.5
+        synth.speakUtterance(myUtterance)
     }
     
 }
